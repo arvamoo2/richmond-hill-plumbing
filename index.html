@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richmond Hill Plumbing Pros | 24/7 Emergency Plumber — York Region</title>
+
+    <meta name="description" content="Richmond Hill's premier 24/7 emergency plumbing service. Serving Richmond Hill, Markham, Vaughan & all of York Region. 60-minute response, upfront pricing, fully licensed.">
+    <meta name="keywords" content="plumber Richmond Hill, emergency plumber York Region, drain cleaning Markham, leak repair Vaughan, 24/7 plumber near me">
+
+    <meta property="og:title" content="Richmond Hill Plumbing Pros | 24/7 York Region Service">
+    <meta property="og:description" content="Fast, reliable emergency plumbing across York Region & the GTA. Dispatch a certified tech now.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Plumber",
+      "name": "Richmond Hill Plumbing Pros",
+      "url": "https://richmondhillplumbingpros.ca/",
+      "telephone": "+14167217325",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Richmond Hill",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "areaServed": ["Richmond Hill", "Markham", "Vaughan", "Aurora", "Newmarket", "Toronto", "GTA"],
+      "openingHours": "Mo-Su 00:00-23:59"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- STICKY HEADER -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="17" cy="17" r="17" fill="#1a3a6e"/>
+                            <path d="M10 24 C10 24 11 17 17 17 C23 17 24 24 24 24" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                            <rect x="12" y="10" width="10" height="7" rx="2" fill="none" stroke="#f97316" stroke-width="2.2"/>
+                            <line x1="17" y1="17" x2="17" y2="14" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text-block">
+                        <span class="logo-text">RICHMOND HILL</span>
+                        <span class="logo-sub">PLUMBING PROS</span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="header-info-center">
+                <span class="header-status">
+                    <span class="status-dot-small"></span> 24/7 DISPATCH ACTIVE — YORK REGION
+                </span>
+                <a href="tel:+14167217325" class="header-phone">416-721-7325</a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active-link">Home</a></li>
+                <li><a href="dispatch.html">Dispatch</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Our Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-ring"></span>
+                <span>YORK REGION'S TRUSTED PLUMBER</span>
+            </div>
+            <h1>Richmond Hill's<br><em>24/7 Emergency</em><br>Plumbing Experts</h1>
+            <p class="hero-sub">60-Minute Response &nbsp;·&nbsp; Upfront Pricing &nbsp;·&nbsp; Fully Licensed & Insured</p>
+
+            <div class="hero-cta-group">
+                <button class="dispatch-btn" id="heroDispatchBtn" onclick="dispatchAndGo()">
+                    <span class="dispatch-icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <path d="M3 11h16M13 5l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="dispatch-label">DISPATCH NOW</span>
+                    <span class="dispatch-loader" id="dispatchLoader" style="display:none">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="spin">
+                            <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="32" stroke-dashoffset="10"/>
+                        </svg>
+                    </span>
+                </button>
+                <a href="#quote" class="quote-hero-btn" onclick="scrollToQuote()">Get a Free Quote</a>
+            </div>
+        </div>
+
+        <div class="hero-trust-strip">
+            <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1L11.2 6.6H17.2L12.5 10.1L14.3 16L9 12.5L3.7 16L5.5 10.1L.8 6.6H6.8L9 1Z" fill="#f97316"/></svg>
+                <span>5-Star Rated</span>
+            </div>
+            <div class="trust-sep">|</div>
+            <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L10.8 6.8H16.5L11.9 9.9L13.6 15.2L9 12.1L4.4 15.2L6.1 9.9L1.5 6.8H7.2L9 1.5Z" fill="none" stroke="#f97316" stroke-width="1.5"/><circle cx="9" cy="9" r="3.5" fill="#f97316" opacity=".3"/></svg>
+                <span>Licensed Master Plumber</span>
+            </div>
+            <div class="trust-sep">|</div>
+            <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="7" width="12" height="9" rx="1.5" stroke="#f97316" stroke-width="1.5"/><path d="M6 7V5a3 3 0 016 0v2" stroke="#f97316" stroke-width="1.5"/><circle cx="9" cy="12" r="1.5" fill="#f97316"/></svg>
+                <span>Fully Insured</span>
+            </div>
+            <div class="trust-sep">|</div>
+            <div class="trust-item">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7.5" stroke="#f97316" stroke-width="1.5"/><path d="M9 5v4l3 2" stroke="#f97316" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span>60-Min Response</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <!-- WHO ARE WE -->
+        <section class="info-block">
+            <div class="split-layout">
+                <div class="text-content">
+                    <div class="section-label">About Us</div>
+                    <h2>Richmond Hill's<br>Most Dependable<br>Plumbing Team</h2>
+                    <p>At Richmond Hill Plumbing Pros, we believe that reliable service isn't a luxury — it's the baseline. Rooted in the York Region community, we've built our reputation on one simple promise: when something goes wrong with your plumbing, you deserve a team that shows up fast, communicates clearly, and gets the job done right the first time.</p>
+                    <p>We serve homeowners and businesses across Richmond Hill, Markham, Vaughan, Aurora, and the broader GTA with the same commitment to quality every single call.</p>
+                    <p class="owner-tag">Locally owned and operated by <strong>Arvin Amoukarami</strong>.</p>
+                </div>
+                <div class="image-content icon-showcase">
+                    <div class="icon-ring">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                            <circle cx="50" cy="50" r="48" stroke="#e8edf5" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="38" fill="#f0f4fb"/>
+                            <!-- Wrench -->
+                            <path d="M38 62L56 44" stroke="#1a3a6e" stroke-width="3.5" stroke-linecap="round"/>
+                            <circle cx="60" cy="40" r="6" stroke="#1a3a6e" stroke-width="3" fill="none"/>
+                            <path d="M55 45l-3 3-3-3 3-3 3 3z" fill="#1a3a6e"/>
+                            <!-- Water Drop -->
+                            <path d="M38 55 C38 55 32 49 32 44 C32 39.6 35.1 36 38 36 C40.9 36 44 39.6 44 44 C44 49 38 55 38 55Z" fill="#3b82f6" opacity=".7"/>
+                            <!-- Checkmark -->
+                            <circle cx="62" cy="62" r="8" fill="#22c55e" opacity=".15"/>
+                            <path d="M58 62l3 3 5-5" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="icon-ring-badge">Est. 2015</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMITMENT -->
+        <section class="info-block highlight-bg">
+            <div class="split-layout reverse-layout">
+                <div class="text-content">
+                    <div class="section-label light-label">Our Promise</div>
+                    <h2>Always Ready.<br>Never an<br>Excuse.</h2>
+                    <p>Plumbing emergencies don't follow a schedule — and neither do we. Our certified technicians are on standby 24 hours a day, 365 days a year. Every service truck is fully stocked for same-visit repairs, so we're not just showing up to assess — we're showing up to fix.</p>
+                    <p>When you call Richmond Hill Plumbing Pros, you'll always speak with a live dispatcher, not a voicemail box. We commit to a 60-minute arrival window and we hold ourselves to it.</p>
+                </div>
+                <div class="image-content">
+                    <div class="commitment-graphic">
+                        <div class="clock-ring">
+                            <div class="clock-inner">
+                                <span class="clock-num">60</span>
+                                <span class="clock-unit">MIN</span>
+                            </div>
+                        </div>
+                        <p class="clock-label">Guaranteed<br>Response Time</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY US -->
+        <section class="info-block">
+            <div class="split-layout">
+                <div class="image-content why-svg-container">
+                    <div class="services-icon-grid">
+                        <div class="svc-icon-tile">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <path d="M8 28 C8 22 12 18 18 18 C24 18 28 22 28 28" stroke="#1a3a6e" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="18" cy="12" r="5" stroke="#1a3a6e" stroke-width="2.5" fill="none"/>
+                            </svg>
+                            <span>Professional</span>
+                        </div>
+                        <div class="svc-icon-tile accent-tile">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <circle cx="18" cy="18" r="14" stroke="#fff" stroke-width="2.5"/>
+                                <path d="M18 10v8l5 3" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                            <span>24/7</span>
+                        </div>
+                        <div class="svc-icon-tile">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <path d="M10 26L24 12" stroke="#1a3a6e" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="27" cy="9" r="4.5" stroke="#1a3a6e" stroke-width="2.5" fill="none"/>
+                            </svg>
+                            <span>Expert Repairs</span>
+                        </div>
+                        <div class="svc-icon-tile">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                <rect x="8" y="14" width="20" height="14" rx="2" stroke="#1a3a6e" stroke-width="2.5" fill="none"/>
+                                <path d="M13 14V11a5 5 0 0110 0v3" stroke="#1a3a6e" stroke-width="2.5" stroke-linecap="round"/>
+                                <circle cx="18" cy="21" r="2.5" fill="#1a3a6e"/>
+                            </svg>
+                            <span>Insured</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <div class="section-label">Why Choose Us</div>
+                    <h2>Why Richmond Hill<br>Plumbing Pros?</h2>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <div class="feature-check">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div>
+                                <h3>Always Available</h3>
+                                <p>24/7 emergency services for Richmond Hill, Markham, Vaughan, and surrounding York Region communities.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-check">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div>
+                                <h3>Certified Standards</h3>
+                                <p>Licensed, insured technicians who treat your home with the care it deserves.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-check">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div>
+                                <h3>Local Expertise</h3>
+                                <p>Deep knowledge of Ontario building codes and York Region infrastructure requirements.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-check">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l4 4 6-7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div>
+                                <h3>Upfront Pricing</h3>
+                                <p>Know your cost before we start. No hidden fees, no billing surprises.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE AREAS -->
+        <section class="info-block">
+            <div class="section-label center-label">Coverage</div>
+            <h2 class="section-center-h2">Our Service Areas</h2>
+            <p class="section-center-p">Proudly serving Richmond Hill and all of York Region. Tap any area to see our local coverage.</p>
+
+            <div class="service-grid">
+
+                <div class="flip-card featured-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front featured-front">
+                            <div class="featured-star">★ PRIMARY</div>
+                            <div class="region-title">
+                                <div class="status-dot"></div>
+                                <h3>Richmond Hill</h3>
+                            </div>
+                            <span class="click-hint">Tap to expand ➔</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-icon">📍</div>
+                            <p><strong>Our Home Base.</strong> Mill Pond, Crosby, Oak Ridges, Jefferson, Langstaff, Elgin Mills &amp; beyond.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card featured-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front featured-front">
+                            <div class="featured-star">★ PRIMARY</div>
+                            <div class="region-title">
+                                <div class="status-dot"></div>
+                                <h3>Markham</h3>
+                            </div>
+                            <span class="click-hint">Tap to expand ➔</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-icon">📍</div>
+                            <p>Unionville, Cornell, Greensborough, Berczy Village, Thornhill, Milliken Mills &amp; more.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card featured-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front featured-front">
+                            <div class="featured-star">★ PRIMARY</div>
+                            <div class="region-title">
+                                <div class="status-dot"></div>
+                                <h3>Vaughan</h3>
+                            </div>
+                            <span class="click-hint">Tap to expand ➔</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-icon">📍</div>
+                            <p>Woodbridge, Maple, Concord, Kleinburg, Thornhill, Vellore Village &amp; surrounding areas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="region-title">
+                                <div class="status-dot"></div>
+                                <h3>Aurora &amp; Newmarket</h3>
+                            </div>
+                            <span class="click-hint">Tap to expand ➔</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-icon">📍</div>
+                            <p>Aurora Village, Bayview Wellington, Newmarket Downtown, Stonehaven &amp; area.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="region-title">
+                                <div class="status-dot"></div>
+                                <h3>Toronto &amp; North York</h3>
+                            </div>
+                            <span class="click-hint">Tap to expand ➔</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-icon">📍</div>
+                            <p>Downtown Toronto, North York, Scarborough, Etobicoke &amp; surrounding GTA communities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="region-title">
+                                <div class="status-dot"></div>
+                                <h3>Peel &amp; Durham</h3>
+                            </div>
+                            <span class="click-hint">Tap to expand ➔</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-icon">📍</div>
+                            <p>Mississauga, Brampton, Pickering, Ajax, Whitby &amp; Oshawa. Full GTA coverage available.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card more-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front special-front">
+                            <div class="region-title">
+                                <h3>Not Listed? Call Us 📍</h3>
+                            </div>
+                            <span class="click-hint dark-hint">Tap to expand ➔</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="back-icon">📞</div>
+                            <p>Don't see your area? Call or text us at <strong>416-721-7325</strong> to confirm same-day availability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS -->
+        <section class="info-block reviews-section">
+            <div class="section-label center-label">Social Proof</div>
+            <h2 class="section-center-h2">What Your Neighbours Say</h2>
+            <div class="reviews-grid">
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-stars">★★★★★</div>
+                        <img src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png" alt="Google Review" class="g-logo">
+                    </div>
+                    <p class="review-text">"Josh was absolutely awesome. Got the problem taken care of quickly and efficiently, and charged an extremely reasonable price."</p>
+                    <div class="review-footer">
+                        <p class="reviewer-name">— Joe L.</p>
+                        <span class="verified-badge">✓ Verified Google Review</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-stars">★★★★★</div>
+                        <img src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png" alt="Google Review" class="g-logo">
+                    </div>
+                    <p class="review-text">"Called at 11pm for a burst pipe — they were here within the hour! Fixed the issue right away and were extremely professional and knowledgeable."</p>
+                    <div class="review-footer">
+                        <p class="reviewer-name">— Lori Carroll</p>
+                        <span class="verified-badge">✓ Verified Google Review</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-stars">★★★★★</div>
+                        <img src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png" alt="Google Review" class="g-logo">
+                    </div>
+                    <p class="review-text">"Great communication and quality work. They helped install a purified water system under my sink. Very professional — highly recommended."</p>
+                    <div class="review-footer">
+                        <p class="reviewer-name">— Matt Jackson</p>
+                        <span class="verified-badge">✓ Verified Google Review</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="more-reviews-container">
+                <a href="https://share.google/w0apaCZszmQEe5ehC" target="_blank" class="secondary-btn">
+                    VIEW ALL GOOGLE REVIEWS
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="display:inline;vertical-align:middle;margin-left:6px"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- FREE QUOTE FORM -->
+        <section id="quote" class="quote-container">
+            <div class="quote-badge">
+                <div class="live-dot"></div> 24/7 DISPATCH ACTIVE — RICHMOND HILL &amp; YORK REGION
+            </div>
+            <h2>Get Your Free Quote</h2>
+            <p class="quote-subtext">60-Minute Response &nbsp;·&nbsp; Upfront Pricing &nbsp;·&nbsp; No Hidden Fees</p>
+
+            <form class="custom-contact-form" id="quote-form" action="https://formspree.io/f/xykddwlk" method="POST">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Jane Smith" autocomplete="name">
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(416) 555-0123" autocomplete="tel">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="jane@example.com" autocomplete="email">
+                </div>
+
+                <div class="input-group">
+                    <label for="service">Service Needed</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Select a service...</option>
+                        <option value="emergency">🚨 24/7 Emergency Dispatch</option>
+                        <option value="clog">Drain Cleaning &amp; Clogs</option>
+                        <option value="leak">Leak Detection &amp; Repair</option>
+                        <option value="install">New Fixture Installation</option>
+                        <option value="water-heater">Water Heater Service</option>
+                        <option value="other">Other Inquiry</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Issue Details</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Describe what's happening and your location (Richmond Hill, Markham, Vaughan, etc.)..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">GET MY FREE QUOTE</button>
+                <p class="privacy-note">🔒 Your information is private and will never be shared. We'll respond within 15 minutes.</p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <circle cx="14" cy="14" r="14" fill="#1a3a6e"/>
+                        <path d="M8 21 C8 17 10.7 14 14 14 C17.3 14 20 17 20 21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                        <rect x="10" y="8" width="8" height="6" rx="1.5" fill="none" stroke="#f97316" stroke-width="1.8"/>
+                    </svg>
+                    <div>
+                        <span class="footer-brand-name">Richmond Hill Plumbing Pros</span>
+                        <span class="footer-brand-sub">York Region's 24/7 Plumbing Experts</span>
+                    </div>
+                </div>
+                <p class="footer-owner">Owner: <strong>Arvin Amoukarami</strong> — Licensed Master Plumber, ON</p>
+            </div>
+
+            <div class="footer-cta-container">
+                <p class="footer-contact">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style="vertical-align:middle;margin-right:6px"><path d="M3.5 3.5h3l1 3-1.5 1.5a9 9 0 004 4L11.5 10.5l3 1v3A1.5 1.5 0 0113 16 11.5 11.5 0 012 5 1.5 1.5 0 013.5 3.5z" stroke="#f97316" stroke-width="1.5" fill="none"/></svg>
+                    CALL OR TEXT: +1-416-721-7325
+                </p>
+                <a href="#quote" class="footer-btn">GET YOUR FREE QUOTE</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Proudly Serving Richmond Hill, Markham, Vaughan &amp; All of York Region &nbsp;|&nbsp; Fully Licensed &amp; Insured</p>
+            <p>© 2026 Richmond Hill Plumbing Pros &nbsp;|&nbsp; All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
