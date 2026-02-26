@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumbing Services | Richmond Hill Plumbing Pros — York Region</title>
+
+    <meta name="description" content="Professional plumbing services in Richmond Hill & York Region. Emergency dispatch, drain cleaning, leak detection, water heaters, sump pumps & fixture installation. 24/7 — call 289-588-6513.">
+    <meta name="keywords" content="plumbing services Richmond Hill, drain cleaning York Region, leak detection Markham, water heater Vaughan, emergency plumber 24/7, sump pump installation">
+    <meta property="og:title" content="Plumbing Services | Richmond Hill Plumbing Pros">
+    <meta property="og:description" content="Master plumbing solutions for York Region. Emergency dispatch, drain cleaning, leak detection, water heaters & more. Licensed, insured, 60-min response.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Plumber",
+      "name": "Richmond Hill Plumbing Pros",
+      "url": "https://richmondhillplumbingpros.ca/",
+      "telephone": "+12895886513",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Richmond Hill",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "areaServed": ["Richmond Hill","Markham","Vaughan","Aurora","Newmarket","Toronto","GTA"],
+      "openingHours": "Mo-Su 00:00-23:59"
+    }
+    </script>
+
+    <style>
+    /* ═══════════════════════════════════════════════════════
+       SERVICES PAGE — SUPPLEMENTAL STYLES v1.0
+       Extends style.css .services-hero, .service-detail-card,
+       .services-page-grid, .massive-cta-section
+    ═══════════════════════════════════════════════════════ */
+
+    /* ── HERO OVERRIDES ──────────────────────────────── */
+    .services-hero {
+        height: auto;
+        min-height: 370px;
+        padding: 100px 24px 96px;
+    }
+    .services-hero-content {
+        position: relative;
+        z-index: 3;
+        max-width: 780px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .services-hero-content h1 {
+        font-family: var(--font-head);
+        font-weight: 800;
+        font-size: clamp(38px, 7vw, 74px);
+        line-height: 1.02;
+        color: var(--white);
+        margin: 0 0 18px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+    .services-hero-content h1 em {
+        font-style: normal;
+        color: var(--orange);
+    }
+    .services-hero-sub {
+        font-family: var(--font-body);
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: rgba(255,255,255,.72);
+        line-height: 1.7;
+        max-width: 560px;
+        margin: 0 auto 34px;
+    }
+
+    /* Urgent badge */
+    .services-hero .urgent-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        background: var(--red-urgent);
+        color: var(--white);
+        padding: 8px 24px;
+        border-radius: 100px;
+        font-family: var(--font-body);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        margin-bottom: 26px;
+        border: 1.5px solid rgba(255,255,255,.18);
+        box-shadow: 0 4px 22px rgba(220,38,38,.55);
+        animation: urgentPulse 2.4s ease-in-out infinite;
+    }
+    .services-hero .urgent-badge .live-dot {
+        background: var(--white);
+        width: 9px; height: 9px;
+        border-radius: 50%;
+        animation: blink 1.1s infinite;
+        flex-shrink: 0;
+    }
+    @keyframes urgentPulse {
+        0%, 100% { box-shadow: 0 4px 22px rgba(220,38,38,.55); }
+        50%      { box-shadow: 0 4px 36px rgba(220,38,38,.8), 0 0 0 10px rgba(220,38,38,.1); }
+    }
+
+    /* Hero CTA group */
+    .services-hero-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    /* Hero trust strip */
+    .services-trust-strip {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        flex-wrap: wrap;
+        margin-top: 38px;
+    }
+    .services-trust-strip .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        color: rgba(255,255,255,.55);
+        font-size: 11.5px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+    .services-trust-strip .trust-sep {
+        color: rgba(255,255,255,.16);
+        font-size: 14px;
+    }
+
+    /* ── SERVICE CARD ICON ───────────────────────────── */
+    .service-icon-wrap {
+        width: 80px; height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        transition: transform 0.3s var(--ease-spring), box-shadow 0.3s;
+    }
+    .service-detail-card:hover .service-icon-wrap {
+        transform: scale(1.1);
+    }
+    .icon-emergency { background: rgba(220,38,38,.1);  box-shadow: 0 4px 16px rgba(220,38,38,.12); }
+    .icon-drain     { background: rgba(59,130,246,.1);  box-shadow: 0 4px 16px rgba(59,130,246,.12); }
+    .icon-leak      { background: rgba(22,163,74,.1);   box-shadow: 0 4px 16px rgba(22,163,74,.12); }
+    .icon-heater    { background: rgba(249,115,22,.1);  box-shadow: 0 4px 16px rgba(249,115,22,.12); }
+    .icon-sump      { background: rgba(26,58,110,.1);   box-shadow: 0 4px 16px rgba(26,58,110,.12); }
+    .icon-fixture   { background: rgba(139,92,246,.1);  box-shadow: 0 4px 16px rgba(139,92,246,.12); }
+
+    /* Pro-tip badge inside cards */
+    .pro-tip {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        background: var(--highlight-bg);
+        border: 1.5px solid rgba(26,58,110,.12);
+        border-radius: 10px;
+        padding: 12px 14px;
+        margin-top: auto;
+        text-align: left;
+    }
+    .pro-tip-icon {
+        flex-shrink: 0;
+        width: 22px; height: 22px;
+        background: var(--navy);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1px;
+    }
+    .pro-tip p {
+        font-size: .82rem !important;
+        color: var(--navy) !important;
+        font-weight: 600;
+        line-height: 1.5 !important;
+        margin: 0 !important;
+        flex-grow: 0 !important;
+    }
+
+    /* ── TRUST SHIELD GRAPHIC ────────────────────────── */
+    .trust-shield-container {
+        flex: 0 0 240px;
+        display: flex;
+        justify-content: center;
+    }
+    .trust-shield-graphic {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .trust-shield-badge {
+        position: absolute;
+        bottom: -8px;
+        right: -14px;
+        background: var(--orange);
+        color: var(--white);
+        font-family: var(--font-head);
+        font-size: 12px;
+        font-weight: 700;
+        padding: 5px 14px;
+        border-radius: 100px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        box-shadow: var(--shadow-orange);
+    }
+
+    /* ── PROCESS STRIP ───────────────────────────────── */
+    .process-strip {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        background: var(--white);
+        border: 1.5px solid var(--card-border);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+    }
+    .process-step {
+        padding: 28px 20px;
+        text-align: center;
+        border-right: 1.5px solid var(--card-border);
+        transition: background 0.25s;
+    }
+    .process-step:last-child { border-right: none; }
+    .process-step:hover { background: var(--highlight-bg); }
+    .process-num {
+        font-family: var(--font-head);
+        font-size: 28px;
+        font-weight: 800;
+        color: var(--orange);
+        line-height: 1;
+        margin-bottom: 6px;
+    }
+    .process-step h4 {
+        font-family: var(--font-head);
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--navy);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin: 0 0 4px;
+    }
+    .process-step p {
+        font-size: .82rem;
+        color: var(--text-body);
+        margin: 0;
+        line-height: 1.5;
+    }
+    @media (max-width: 780px) {
+        .process-strip { grid-template-columns: repeat(2, 1fr); }
+        .process-step:nth-child(2) { border-right: none; }
+    }
+    @media (max-width: 480px) {
+        .process-strip { grid-template-columns: 1fr; }
+        .process-step { border-right: none; border-bottom: 1.5px solid var(--card-border); }
+        .process-step:last-child { border-bottom: none; }
+    }
+
+    /* ── RESPONSIVE ──────────────────────────────────── */
+    @media (max-width: 600px) {
+        .services-hero { padding: 80px 18px 76px; min-height: 310px; }
+        .services-hero-content h1 { font-size: clamp(32px, 10vw, 50px); }
+        .services-trust-strip { display: none; }
+    }
+    </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════════ -->
+<header id="site-header">
+    <nav>
+        <a href="index.html" class="logo-link" aria-label="Richmond Hill Plumbing Pros – Home">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+                        <circle cx="19" cy="19" r="19" fill="#1a3a6e"/>
+                        <path d="M12 27L22 17" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+                        <circle cx="26" cy="13" r="5" stroke="#f97316" stroke-width="2.2" fill="none"/>
+                        <path d="M11.5 24.5C11.5 24.5 8 21 8 18.5C8 16.3 9.5 15 11.5 15C13.5 15 15 16.3 15 18.5C15 21 11.5 24.5 11.5 24.5Z"
+                              fill="#60a5fa" opacity="0.9"/>
+                    </svg>
+                </div>
+                <div class="logo-text-block">
+                    <span class="logo-text">RICHMOND HILL</span>
+                    <span class="logo-sub">PLUMBING PROS</span>
+                </div>
+            </div>
+        </a>
+
+        <div class="header-info-center">
+            <span class="header-status">
+                <span class="status-dot-small"></span>
+                24/7 DISPATCH ACTIVE — YORK REGION
+            </span>
+            <a href="tel:+12895886513" class="header-phone">289-588-6513</a>
+        </div>
+
+        <ul class="nav-links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dispatch.html">Dispatch</a></li>
+            <li><a href="services.html" class="active-link">Services</a></li>
+            <li><a href="work.html">Our Work</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ════════════════════════════════════════════════════════
+     SERVICES HERO
+════════════════════════════════════════════════════════ -->
+<section class="services-hero">
+    <div class="services-hero-content">
+        <div class="urgent-badge">
+            <span class="live-dot"></span>
+            24/7 SERVICE — YORK REGION
+        </div>
+
+        <h1>Master Plumbing Solutions <em>for York Region.</em></h1>
+
+        <p class="services-hero-sub">
+            From midnight emergencies to precision installations. If water runs through it, we handle it better than anyone else.
+        </p>
+
+        <div class="services-hero-cta">
+            <a href="dispatch.html" class="dispatch-btn">
+                <span class="dispatch-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10h12M11 4l6 6-6 6"
+                              stroke="currentColor" stroke-width="2.2"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="dispatch-label">DISPATCH NOW</span>
+            </a>
+            <a href="tel:+12895886513" class="quote-hero-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                     style="display:inline;vertical-align:-2px;margin-right:6px" aria-hidden="true">
+                    <path d="M3 2.5h3l1.2 3L5.8 7a8 8 0 003.5 3.5L10.7 9l3 1.2v2.8a1.2 1.2 0 01-1.2 1.2A12 12 0 012 3.5 1.2 1.2 0 013 2.3"
+                          stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Call 289-588-6513
+            </a>
+        </div>
+
+        <div class="services-trust-strip">
+            <div class="trust-item">
+                <svg width="15" height="15" viewBox="0 0 17 17" fill="none" aria-hidden="true">
+                    <path d="M8.5 1.5L10.4 6.5H15.8L11.5 9.6L13.1 14.8L8.5 11.7L3.9 14.8L5.5 9.6L1.2 6.5H6.6L8.5 1.5Z" fill="#f97316"/>
+                </svg>
+                <span>5-Star Google Rated</span>
+            </div>
+            <div class="trust-sep" aria-hidden="true">|</div>
+            <div class="trust-item">
+                <svg width="15" height="15" viewBox="0 0 17 17" fill="none" aria-hidden="true">
+                    <path d="M8.5 1.5L14.5 4.5V9C14.5 12.3 11.8 15.2 8.5 16C5.2 15.2 2.5 12.3 2.5 9V4.5L8.5 1.5Z"
+                          stroke="#f97316" stroke-width="1.7" stroke-linejoin="round" fill="none"/>
+                    <path d="M6 9l2 2 3.5-3.5" stroke="#f97316" stroke-width="1.7"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Licensed &amp; Insured</span>
+            </div>
+            <div class="trust-sep" aria-hidden="true">|</div>
+            <div class="trust-item">
+                <svg width="15" height="15" viewBox="0 0 17 17" fill="none" aria-hidden="true">
+                    <circle cx="8.5" cy="8.5" r="6.5" stroke="#f97316" stroke-width="1.7"/>
+                    <path d="M8.5 5v3.5l2.5 1.5" stroke="#f97316" stroke-width="1.7" stroke-linecap="round"/>
+                </svg>
+                <span>60-Min Response</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     MAIN
+════════════════════════════════════════════════════════ -->
+<main class="container">
+
+    <!-- ═══ ELITE 6 SERVICE GRID ═══ -->
+    <section class="reveal">
+        <div class="section-label center-label">What We Do</div>
+        <h2 class="section-center-h2">Our Core Services</h2>
+        <p class="section-center-p">Six specialized plumbing disciplines. One unwavering standard of quality.</p>
+
+        <div class="services-page-grid" style="margin-top:38px;">
+
+            <!-- 1 · Emergency Dispatch -->
+            <div class="service-detail-card reveal-child">
+                <div class="service-icon-wrap icon-emergency">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+                        <path d="M19 6v12" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round"/>
+                        <circle cx="19" cy="24" r="2" fill="#dc2626"/>
+                        <circle cx="19" cy="19" r="15" stroke="#dc2626" stroke-width="2.2" fill="none"/>
+                        <path d="M12 8l-2-3M26 8l2-3" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h2>24/7 Emergency Dispatch</h2>
+                <div class="service-divider"></div>
+                <p>Burst pipes, sewage backups, flooding, and gas-line leaks don't wait for business hours — and neither do we. Our emergency fleet is GPS-tracked and rolling within minutes of your call, every hour of every day.</p>
+                <div class="pro-tip">
+                    <div class="pro-tip-icon">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v4M6 8.5v.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <p>Pro Tip: Turn off your main water shutoff valve immediately to minimize damage while you wait for us.</p>
+                </div>
+            </div>
+
+            <!-- 2 · Drain Cleaning -->
+            <div class="service-detail-card reveal-child">
+                <div class="service-icon-wrap icon-drain">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+                        <circle cx="19" cy="12" r="6" stroke="#3b82f6" stroke-width="2.2" fill="none"/>
+                        <path d="M19 18v12" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M13 24c0 4 2.7 7 6 7s6-3 6-7" stroke="#3b82f6" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                        <path d="M15 12h8" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h2>Drain Cleaning &amp; Clogs</h2>
+                <div class="service-divider"></div>
+                <p>Kitchen sinks, floor drains, main sewer lines — we clear them all. Our truck-mounted hydro-jetting and camera-fed snake technology eliminates blockages completely, not just temporarily.</p>
+                <div class="pro-tip">
+                    <div class="pro-tip-icon">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v4M6 8.5v.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <p>Pro Tip: We use camera-fed snake tech for 100% clearing — you'll see the before and after on screen.</p>
+                </div>
+            </div>
+
+            <!-- 3 · Leak Detection -->
+            <div class="service-detail-card reveal-child">
+                <div class="service-icon-wrap icon-leak">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+                        <path d="M19 6C19 6 10 17 10 23C10 28 14 32 19 32C24 32 28 28 28 23C28 17 19 6 19 6Z"
+                              stroke="#16a34a" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+                        <path d="M15 23c0-3.5 4-8 4-8" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round" opacity="0.6"/>
+                        <circle cx="25" cy="14" r="4" stroke="#16a34a" stroke-width="2.2" fill="none"/>
+                        <path d="M23.5 14h3M25 12.5v3" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h2>Leak Detection &amp; Repair</h2>
+                <div class="service-divider"></div>
+                <p>Hidden leaks can cause thousands in damage before you notice them. We use acoustic listening devices and thermal imaging to pinpoint leaks inside walls, under slabs, and behind fixtures — with zero guesswork.</p>
+                <div class="pro-tip">
+                    <div class="pro-tip-icon">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v4M6 8.5v.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <p>Pro Tip: An unexplained spike in your water bill almost always means a hidden leak. Call for a free assessment.</p>
+                </div>
+            </div>
+
+            <!-- 4 · Water Heaters -->
+            <div class="service-detail-card reveal-child">
+                <div class="service-icon-wrap icon-heater">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+                        <rect x="10" y="6" width="18" height="26" rx="3" stroke="#f97316" stroke-width="2.2" fill="none"/>
+                        <circle cx="19" cy="23" r="4" stroke="#f97316" stroke-width="2.2" fill="none"/>
+                        <path d="M16 13h6" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M17 3v3M21 3v3" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M19 21v4" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h2>Water Heater Service</h2>
+                <div class="service-divider"></div>
+                <p>Tank and tankless installations, repairs, and replacements. We carry Rheem, AO Smith, Navien, and Rinnai inventory on our trucks for same-day hot water restoration. Full warranty on every install.</p>
+                <div class="pro-tip">
+                    <div class="pro-tip-icon">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v4M6 8.5v.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <p>Pro Tip: Tankless systems save up to 30% on energy. Ask us about the Navien NPE-240A for York Region homes.</p>
+                </div>
+            </div>
+
+            <!-- 5 · Sump Pumps -->
+            <div class="service-detail-card reveal-child">
+                <div class="service-icon-wrap icon-sump">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+                        <path d="M10 20L10 30C10 31.7 11.3 33 13 33H25C26.7 33 28 31.7 28 30V20"
+                              stroke="#1a3a6e" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                        <path d="M7 20h24" stroke="#1a3a6e" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M19 20V8" stroke="#1a3a6e" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M15 12l4-4 4 4" stroke="#1a3a6e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 26h10" stroke="#1a3a6e" stroke-width="2.2" stroke-linecap="round" opacity="0.4"/>
+                        <path d="M14 29h6" stroke="#1a3a6e" stroke-width="2.2" stroke-linecap="round" opacity="0.25"/>
+                    </svg>
+                </div>
+                <h2>Sump Pump Systems</h2>
+                <div class="service-divider"></div>
+                <p>Protect your basement from York Region's heavy rains and spring thaws. We install, replace, and maintain primary and battery-backup sump pump systems with check-valve protection and alarm monitoring.</p>
+                <div class="pro-tip">
+                    <div class="pro-tip-icon">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v4M6 8.5v.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <p>Pro Tip: Always install a battery backup — power outages during storms are exactly when your sump pump fails.</p>
+                </div>
+            </div>
+
+            <!-- 6 · Sinks & Faucets -->
+            <div class="service-detail-card reveal-child">
+                <div class="service-icon-wrap icon-fixture">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+                        <path d="M12 18h14c1.7 0 3 1.3 3 3v2c0 1.7-1.3 3-3 3H12c-1.7 0-3-1.3-3-3v-2c0-1.7 1.3-3 3-3z"
+                              stroke="#8b5cf6" stroke-width="2.2" fill="none"/>
+                        <path d="M19 18V10" stroke="#8b5cf6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M15 10h8" stroke="#8b5cf6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M16 26v4M22 26v4" stroke="#8b5cf6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M13 30h12" stroke="#8b5cf6" stroke-width="2.2" stroke-linecap="round"/>
+                        <circle cx="15" cy="22" r="1" fill="#8b5cf6" opacity="0.5"/>
+                        <circle cx="23" cy="22" r="1" fill="#8b5cf6" opacity="0.5"/>
+                    </svg>
+                </div>
+                <h2>Sinks, Faucets &amp; Fixtures</h2>
+                <div class="service-divider"></div>
+                <p>From kitchen sink replacements to bathroom faucet upgrades and toilet installations. We work with Kohler, Moen, Delta, and all major brands. Precision installation with leak-free guarantees.</p>
+                <div class="pro-tip">
+                    <div class="pro-tip-icon">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v4M6 8.5v.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <p>Pro Tip: A dripping faucet wastes up to 3,000 gallons/year. We'll fix or upgrade it in a single visit.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══ SECTION DIVIDER ═══ -->
+    <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-box"></span>
+        <span class="divider-line"></span>
+    </div>
+
+    <!-- ═══ OUR PROCESS — 4-Step Strip ═══ -->
+    <section class="reveal" style="margin-bottom:28px;">
+        <div class="section-label center-label">Our Process</div>
+        <h2 class="section-center-h2">How Every Job Works</h2>
+        <p class="section-center-p">A transparent, four-step system. No surprises, ever.</p>
+
+        <div class="process-strip" style="margin-top:34px;">
+            <div class="process-step reveal-child">
+                <div class="process-num">01</div>
+                <h4>You Call or Submit</h4>
+                <p>Reach us by phone, form, or text — 24/7/365.</p>
+            </div>
+            <div class="process-step reveal-child">
+                <div class="process-num">02</div>
+                <h4>We Diagnose</h4>
+                <p>A certified tech arrives within 60 minutes to assess the issue.</p>
+            </div>
+            <div class="process-step reveal-child">
+                <div class="process-num">03</div>
+                <h4>Upfront Quote</h4>
+                <p>You get a firm, written price before a single wrench turns.</p>
+            </div>
+            <div class="process-step reveal-child">
+                <div class="process-num">04</div>
+                <h4>Job Complete</h4>
+                <p>Work is done, area cleaned, and backed by our warranty.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SECTION DIVIDER ═══ -->
+    <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-box"></span>
+        <span class="divider-line"></span>
+    </div>
+
+    <!-- ═══ WHY WE'RE DIFFERENT — Split Layout ═══ -->
+    <section class="info-block reveal">
+        <div class="split-layout">
+            <div class="text-content">
+                <div class="section-label">The Difference</div>
+                <h2>Why We're Not<br>Like the Others.</h2>
+                <p>Most plumbers show up late, quote you one thing, and charge you another. We built Richmond Hill Plumbing Pros to be the opposite — and over 10 years, we've never wavered.</p>
+
+                <div class="features-grid">
+                    <div class="feature reveal-child">
+                        <div class="feature-check" aria-hidden="true">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Clean Home Guarantee</h3>
+                            <p>We lay down drop cloths, wear boot covers, and leave your home cleaner than we found it. Every single time — or we come back.</p>
+                        </div>
+                    </div>
+                    <div class="feature reveal-child">
+                        <div class="feature-check" aria-hidden="true">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Upfront, Locked-In Pricing</h3>
+                            <p>You see the total before work begins — written, signed, and final. If we hit an unexpected issue, we call you first. Zero surprise invoices.</p>
+                        </div>
+                    </div>
+                    <div class="feature reveal-child">
+                        <div class="feature-check" aria-hidden="true">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Fully Stocked Trucks</h3>
+                            <p>Our vans carry over 2,000 parts, tools, and fixtures. Most jobs are completed in one visit — no "we'll have to come back" excuses.</p>
+                        </div>
+                    </div>
+                    <div class="feature reveal-child">
+                        <div class="feature-check" aria-hidden="true">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M2 7l4 4 6-7" stroke="white" stroke-width="2.2"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Owner-Operated Quality</h3>
+                            <p>Arvin Amoukarami personally reviews every completed job. Your work isn't signed off by a foreman — it's verified by the owner.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Shield Visual -->
+            <div class="image-content trust-shield-container">
+                <div class="trust-shield-graphic">
+                    <svg width="210" height="210" viewBox="0 0 210 210" fill="none" aria-hidden="true">
+                        <!-- Outer ring -->
+                        <circle cx="105" cy="105" r="100" stroke="#e2e8f0" stroke-width="1.5"/>
+                        <circle cx="105" cy="105" r="85" fill="#f0f4fb"/>
+                        <!-- Shield -->
+                        <path d="M105 42L148 62v30c0 28-18.5 52.5-43 60-24.5-7.5-43-32-43-60V62l43-20z"
+                              stroke="#1a3a6e" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
+                        <path d="M105 42L148 62v30c0 28-18.5 52.5-43 60-24.5-7.5-43-32-43-60V62l43-20z"
+                              fill="rgba(26,58,110,.06)"/>
+                        <!-- Inner checkmark -->
+                        <path d="M85 100l14 14 26-28" stroke="#f97316" stroke-width="3.5"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                        <!-- Star accents -->
+                        <circle cx="63" cy="62" r="4" fill="#f97316" opacity="0.2"/>
+                        <circle cx="147" cy="62" r="4" fill="#f97316" opacity="0.2"/>
+                        <circle cx="105" cy="160" r="3" fill="#3b82f6" opacity="0.3"/>
+                    </svg>
+                    <div class="trust-shield-badge">Trusted Since 2015</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ COMMITMENT BLOCK ═══ -->
+    <section class="info-block highlight-bg reveal">
+        <div class="split-layout reverse-layout">
+            <div class="text-content">
+                <div class="section-label light-label">Our Commitment</div>
+                <h2>Always Ready.<br>Zero Excuses.<br>Every Service Call.</h2>
+                <p>Our certified technicians are on standby every hour of every day, year-round. Every truck rolls fully stocked so we're not just showing up to assess — we're showing up to fix.</p>
+                <p>Every call is answered by a live dispatcher. We commit to a 60-minute arrival window and hold ourselves publicly accountable to it — check our Google reviews.</p>
+            </div>
+            <div class="image-content">
+                <div class="commitment-graphic">
+                    <div class="clock-ring" aria-hidden="true">
+                        <div class="clock-inner">
+                            <span class="clock-num">60</span>
+                            <span class="clock-unit">MIN</span>
+                        </div>
+                    </div>
+                    <p class="clock-label">Guaranteed<br>Arrival Time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ MASSIVE CONVERSION CTA ═══ -->
+    <section class="massive-cta-section reveal">
+        <h2>Ready to Get It Fixed?</h2>
+        <p>Licensed, insured, and at your door within the hour. No surprises, no excuses — just expert plumbing done right.</p>
+        <a href="dispatch.html" class="massive-dispatch-btn-alt">
+            DISPATCH A PRO TO MY DOOR
+        </a>
+        <p style="margin-top:24px;margin-bottom:0;font-family:var(--font-head);font-size:22px;font-weight:700;color:var(--navy);letter-spacing:0.5px;">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                 style="display:inline;vertical-align:-3px;margin-right:6px" aria-hidden="true">
+                <path d="M3 3h3.5l1.5 3.5L6.5 8a9.5 9.5 0 004 4l1.5-1.5 3.5 1.5v3A1.5 1.5 0 0114 16.5 13.5 13.5 0 01.5 3 1.5 1.5 0 013 1.5"
+                      stroke="#f97316" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Or call directly: <a href="tel:+12895886513" style="color:var(--orange);text-decoration:none;">289-588-6513</a>
+        </p>
+    </section>
+
+</main>
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+                    <circle cx="17" cy="17" r="17" fill="#1a3a6e"/>
+                    <path d="M10 26C10 21 13.1 18 17 18C20.9 18 24 21 24 26"
+                          stroke="#fff" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                    <rect x="12" y="10" width="10" height="8" rx="1.5"
+                          fill="none" stroke="#f97316" stroke-width="2"/>
+                    <line x1="17" y1="18" x2="17" y2="14"
+                          stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <div>
+                    <span class="footer-brand-name">Richmond Hill Plumbing Pros</span>
+                    <span class="footer-brand-sub">York Region's 24/7 Plumbing Experts</span>
+                </div>
+            </div>
+            <p class="footer-owner">
+                Owner: <strong>Arvin Amoukarami</strong> — Licensed Master Plumber, ON
+            </p>
+        </div>
+
+        <div class="footer-cta-container">
+            <p class="footer-contact">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                     style="vertical-align:middle;margin-right:7px" aria-hidden="true">
+                    <path d="M3 3h3.5l1.5 3.5L6.5 8a9.5 9.5 0 004 4l1.5-1.5 3.5 1.5v3A1.5 1.5 0 0114 16.5 13.5 13.5 0 01.5 3 1.5 1.5 0 013 1.5"
+                          stroke="#f97316" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                CALL OR TEXT: +1-289-588-6513
+            </p>
+            <a href="dispatch.html" class="footer-btn">DISPATCH A PLUMBER</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Proudly Serving Richmond Hill, Markham, Vaughan &amp; All of York Region &nbsp;|&nbsp; Fully Licensed &amp; Insured</p>
+        <p>&copy; 2026 Richmond Hill Plumbing Pros &nbsp;|&nbsp; All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
