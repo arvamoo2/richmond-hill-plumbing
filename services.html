@@ -36,9 +36,10 @@
 
     <style>
     /* ═══════════════════════════════════════════════════════
-       SERVICES PAGE — SUPPLEMENTAL STYLES v1.0
+       SERVICES PAGE — SUPPLEMENTAL STYLES v2.0
        Extends style.css .services-hero, .service-detail-card,
        .services-page-grid, .massive-cta-section
+       v2.0: Replaced SVG icons with 3D mascot character renders
     ═══════════════════════════════════════════════════════ */
 
     /* ── HERO OVERRIDES ──────────────────────────────── */
@@ -142,25 +143,36 @@
         font-size: 14px;
     }
 
-    /* ── SERVICE CARD ICON ───────────────────────────── */
-    .service-icon-wrap {
-        width: 80px; height: 80px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-        transition: transform 0.3s var(--ease-spring), box-shadow 0.3s;
+    /* ── SERVICE CARD — 3D MASCOT IMAGES ────────────── */
+    .service-mascot {
+        display: block;
+        width: auto;
+        height: 180px;
+        max-width: 100%;
+        object-fit: contain;
+        margin: 0 auto 24px;
+        filter: drop-shadow(0 10px 22px rgba(15,23,42,.13));
+        transition: transform 0.45s var(--ease-spring), filter 0.45s ease;
     }
-    .service-detail-card:hover .service-icon-wrap {
-        transform: scale(1.1);
+    .service-detail-card:hover .service-mascot {
+        transform: translateY(-10px) scale(1.05);
+        filter: drop-shadow(0 22px 32px rgba(15,23,42,.2));
     }
-    .icon-emergency { background: rgba(220,38,38,.1);  box-shadow: 0 4px 16px rgba(220,38,38,.12); }
-    .icon-drain     { background: rgba(59,130,246,.1);  box-shadow: 0 4px 16px rgba(59,130,246,.12); }
-    .icon-leak      { background: rgba(22,163,74,.1);   box-shadow: 0 4px 16px rgba(22,163,74,.12); }
-    .icon-heater    { background: rgba(249,115,22,.1);  box-shadow: 0 4px 16px rgba(249,115,22,.12); }
-    .icon-sump      { background: rgba(26,58,110,.1);   box-shadow: 0 4px 16px rgba(26,58,110,.12); }
-    .icon-fixture   { background: rgba(139,92,246,.1);  box-shadow: 0 4px 16px rgba(139,92,246,.12); }
+
+    /* Override base card padding for taller mascot images */
+    .service-detail-card {
+        padding-top: 30px;
+        padding-bottom: 28px;
+    }
+
+    /* Responsive mascot sizing */
+    @media (min-width: 601px) and (max-width: 940px) {
+        .service-mascot { height: 155px; margin-bottom: 20px; }
+    }
+    @media (max-width: 600px) {
+        .service-mascot { height: 140px; margin-bottom: 18px; }
+        .service-detail-card { padding-top: 22px; }
+    }
 
     /* Pro-tip badge inside cards */
     .pro-tip {
@@ -404,14 +416,9 @@
 
             <!-- 1 · Emergency Dispatch -->
             <div class="service-detail-card reveal-child">
-                <div class="service-icon-wrap icon-emergency">
-                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
-                        <path d="M19 6v12" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round"/>
-                        <circle cx="19" cy="24" r="2" fill="#dc2626"/>
-                        <circle cx="19" cy="19" r="15" stroke="#dc2626" stroke-width="2.2" fill="none"/>
-                        <path d="M12 8l-2-3M26 8l2-3" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round"/>
-                    </svg>
-                </div>
+                <img src="assets/images/service-emergency-dispatch.png"
+                     alt="3D skeleton plumber mascot — 24/7 emergency plumbing dispatch in Richmond Hill and York Region"
+                     class="service-mascot" loading="lazy" width="400" height="400">
                 <h2>24/7 Emergency Dispatch</h2>
                 <div class="service-divider"></div>
                 <p>Burst pipes, sewage backups, flooding, and gas-line leaks don't wait for business hours — and neither do we. Our emergency fleet is GPS-tracked and rolling within minutes of your call, every hour of every day.</p>
@@ -425,14 +432,9 @@
 
             <!-- 2 · Drain Cleaning -->
             <div class="service-detail-card reveal-child">
-                <div class="service-icon-wrap icon-drain">
-                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
-                        <circle cx="19" cy="12" r="6" stroke="#3b82f6" stroke-width="2.2" fill="none"/>
-                        <path d="M19 18v12" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
-                        <path d="M13 24c0 4 2.7 7 6 7s6-3 6-7" stroke="#3b82f6" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-                        <path d="M15 12h8" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
-                    </svg>
-                </div>
+                <img src="assets/images/service-drain-cleaning.png"
+                     alt="3D skeleton plumber mascot — professional drain cleaning and clog removal service"
+                     class="service-mascot" loading="lazy" width="400" height="400">
                 <h2>Drain Cleaning &amp; Clogs</h2>
                 <div class="service-divider"></div>
                 <p>Kitchen sinks, floor drains, main sewer lines — we clear them all. Our truck-mounted hydro-jetting and camera-fed snake technology eliminates blockages completely, not just temporarily.</p>
@@ -446,15 +448,9 @@
 
             <!-- 3 · Leak Detection -->
             <div class="service-detail-card reveal-child">
-                <div class="service-icon-wrap icon-leak">
-                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
-                        <path d="M19 6C19 6 10 17 10 23C10 28 14 32 19 32C24 32 28 28 28 23C28 17 19 6 19 6Z"
-                              stroke="#16a34a" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
-                        <path d="M15 23c0-3.5 4-8 4-8" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round" opacity="0.6"/>
-                        <circle cx="25" cy="14" r="4" stroke="#16a34a" stroke-width="2.2" fill="none"/>
-                        <path d="M23.5 14h3M25 12.5v3" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round"/>
-                    </svg>
-                </div>
+                <img src="assets/images/service-leak-detection.png"
+                     alt="3D skeleton plumber mascot — leak detection and repair using thermal imaging"
+                     class="service-mascot" loading="lazy" width="400" height="400">
                 <h2>Leak Detection &amp; Repair</h2>
                 <div class="service-divider"></div>
                 <p>Hidden leaks can cause thousands in damage before you notice them. We use acoustic listening devices and thermal imaging to pinpoint leaks inside walls, under slabs, and behind fixtures — with zero guesswork.</p>
@@ -468,15 +464,9 @@
 
             <!-- 4 · Water Heaters -->
             <div class="service-detail-card reveal-child">
-                <div class="service-icon-wrap icon-heater">
-                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
-                        <rect x="10" y="6" width="18" height="26" rx="3" stroke="#f97316" stroke-width="2.2" fill="none"/>
-                        <circle cx="19" cy="23" r="4" stroke="#f97316" stroke-width="2.2" fill="none"/>
-                        <path d="M16 13h6" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/>
-                        <path d="M17 3v3M21 3v3" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/>
-                        <path d="M19 21v4" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/>
-                    </svg>
-                </div>
+                <img src="assets/images/service-water-heater.png"
+                     alt="3D skeleton plumber mascot — water heater installation and repair service"
+                     class="service-mascot" loading="lazy" width="400" height="400">
                 <h2>Water Heater Service</h2>
                 <div class="service-divider"></div>
                 <p>Tank and tankless installations, repairs, and replacements. We carry Rheem, AO Smith, Navien, and Rinnai inventory on our trucks for same-day hot water restoration. Full warranty on every install.</p>
@@ -490,17 +480,9 @@
 
             <!-- 5 · Sump Pumps -->
             <div class="service-detail-card reveal-child">
-                <div class="service-icon-wrap icon-sump">
-                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
-                        <path d="M10 20L10 30C10 31.7 11.3 33 13 33H25C26.7 33 28 31.7 28 30V20"
-                              stroke="#1a3a6e" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-                        <path d="M7 20h24" stroke="#1a3a6e" stroke-width="2.2" stroke-linecap="round"/>
-                        <path d="M19 20V8" stroke="#1a3a6e" stroke-width="2.2" stroke-linecap="round"/>
-                        <path d="M15 12l4-4 4 4" stroke="#1a3a6e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M14 26h10" stroke="#1a3a6e" stroke-width="2.2" stroke-linecap="round" opacity="0.4"/>
-                        <path d="M14 29h6" stroke="#1a3a6e" stroke-width="2.2" stroke-linecap="round" opacity="0.25"/>
-                    </svg>
-                </div>
+                <img src="assets/images/service-sump-pump.png"
+                     alt="3D skeleton plumber mascot — sump pump installation and basement flood protection"
+                     class="service-mascot" loading="lazy" width="400" height="400">
                 <h2>Sump Pump Systems</h2>
                 <div class="service-divider"></div>
                 <p>Protect your basement from York Region's heavy rains and spring thaws. We install, replace, and maintain primary and battery-backup sump pump systems with check-valve protection and alarm monitoring.</p>
@@ -514,18 +496,9 @@
 
             <!-- 6 · Sinks & Faucets -->
             <div class="service-detail-card reveal-child">
-                <div class="service-icon-wrap icon-fixture">
-                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
-                        <path d="M12 18h14c1.7 0 3 1.3 3 3v2c0 1.7-1.3 3-3 3H12c-1.7 0-3-1.3-3-3v-2c0-1.7 1.3-3 3-3z"
-                              stroke="#8b5cf6" stroke-width="2.2" fill="none"/>
-                        <path d="M19 18V10" stroke="#8b5cf6" stroke-width="2.2" stroke-linecap="round"/>
-                        <path d="M15 10h8" stroke="#8b5cf6" stroke-width="2.2" stroke-linecap="round"/>
-                        <path d="M16 26v4M22 26v4" stroke="#8b5cf6" stroke-width="2.2" stroke-linecap="round"/>
-                        <path d="M13 30h12" stroke="#8b5cf6" stroke-width="2.2" stroke-linecap="round"/>
-                        <circle cx="15" cy="22" r="1" fill="#8b5cf6" opacity="0.5"/>
-                        <circle cx="23" cy="22" r="1" fill="#8b5cf6" opacity="0.5"/>
-                    </svg>
-                </div>
+                <img src="assets/images/service-faucets-fixtures.png"
+                     alt="3D skeleton plumber mascot — sink, faucet, and fixture installation service"
+                     class="service-mascot" loading="lazy" width="400" height="400">
                 <h2>Sinks, Faucets &amp; Fixtures</h2>
                 <div class="service-divider"></div>
                 <p>From kitchen sink replacements to bathroom faucet upgrades and toilet installations. We work with Kohler, Moen, Delta, and all major brands. Precision installation with leak-free guarantees.</p>
