@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Dispatch | Richmond Hill Plumbing Pros — 24/7 York Region</title>
+
+    <meta name="description" content="Need a plumber now? Dispatch a certified Richmond Hill Plumbing Pros technician to your door in under 60 minutes. 24/7 emergency service across York Region.">
+    <meta name="keywords" content="emergency plumber dispatch Richmond Hill, 24/7 plumber York Region, urgent plumbing service Markham Vaughan">
+    <meta property="og:title" content="Emergency Dispatch | Richmond Hill Plumbing Pros">
+    <meta property="og:description" content="Dispatch a certified plumber to your door in under 60 minutes. 24/7 emergency service — Richmond Hill, Markham, Vaughan & York Region.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Plumber",
+      "name": "Richmond Hill Plumbing Pros",
+      "url": "https://richmondhillplumbingpros.ca/",
+      "telephone": "+12895886513",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Richmond Hill",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "areaServed": ["Richmond Hill","Markham","Vaughan","Aurora","Newmarket","Toronto","GTA"],
+      "openingHours": "Mo-Su 00:00-23:59"
+    }
+    </script>
+
+    <style>
+        /* ═══════════════════════════════════════════
+           DISPATCH PAGE — SUPPLEMENTAL STYLES
+           (extends style.css dispatch section)
+        ═══════════════════════════════════════════ */
+
+        .dispatch-hero {
+            height: 48vh;
+            min-height: 340px;
+        }
+        .dispatch-hero .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 40px 24px 20px;
+            max-width: 720px;
+        }
+        .dispatch-hero h1 {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 1.02;
+            color: var(--white);
+            margin: 0 0 18px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .dispatch-hero h1 em {
+            font-style: normal;
+            color: var(--orange);
+        }
+        .dispatch-hero .hero-sub {
+            font-size: 1.02rem;
+            font-weight: 600;
+            color: rgba(255,255,255,.72);
+            letter-spacing: 0.3px;
+            text-transform: none;
+            margin: 0 0 28px;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        /* Urgent badge override */
+        .dispatch-hero .urgent-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            background: var(--red-urgent);
+            border: 1.5px solid rgba(220,38,38,.6);
+            color: var(--white);
+            padding: 8px 22px;
+            border-radius: 100px;
+            font-size: 11.5px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            font-family: var(--font-body);
+            box-shadow: 0 4px 20px rgba(220,38,38,.5);
+            animation: urgentPulse 2.2s ease-in-out infinite;
+        }
+        .dispatch-hero .urgent-badge .live-dot {
+            background: var(--white);
+            height: 9px;
+            width: 9px;
+        }
+
+        @keyframes urgentPulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(220,38,38,.5); }
+            50%      { box-shadow: 0 4px 34px rgba(220,38,38,.75), 0 0 0 8px rgba(220,38,38,.12); }
+        }
+
+        /* Scroll-down indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255,255,255,.4);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: var(--font-body);
+            animation: scrollBounce 2s ease-in-out infinite;
+        }
+        @keyframes scrollBounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50%      { transform: translateX(-50%) translateY(6px); }
+        }
+
+        /* ── Direct Contact Sidebar ──────────── */
+        .direct-contact-card {
+            background: var(--white);
+            border: 1.5px solid var(--card-border);
+            border-radius: 18px;
+            padding: 34px 28px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.38s var(--ease-out), box-shadow 0.38s ease, border-color 0.38s ease;
+        }
+        .direct-contact-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(26,58,110,.18);
+        }
+        .direct-contact-card h3 {
+            font-family: var(--font-head);
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 0 6px;
+        }
+        .direct-contact-card > p {
+            color: var(--text-body);
+            font-size: .92rem;
+            margin: 0 0 20px;
+            line-height: 1.6;
+        }
+        .direct-phone-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--highlight-bg);
+            border: 2px dashed rgba(26,58,110,.18);
+            border-radius: 13px;
+            padding: 18px 16px;
+            margin-bottom: 16px;
+        }
+        .direct-phone-display span {
+            font-family: var(--font-head);
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--navy);
+            letter-spacing: 1px;
+        }
+        .call-now-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: var(--red-urgent);
+            color: var(--white);
+            font-family: var(--font-head);
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 16px 20px;
+            border-radius: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: all 0.28s var(--ease-spring);
+            box-shadow: 0 4px 20px rgba(220,38,38,.3);
+        }
+        .call-now-btn:hover {
+            transform: translateY(-4px);
+            background: #b91c1c;
+            box-shadow: 0 12px 36px rgba(220,38,38,.45);
+        }
+        .contact-alt {
+            margin-top: 18px;
+            text-align: center;
+        }
+        .contact-alt p {
+            font-size: .82rem;
+            color: var(--gray-300);
+            margin: 0 0 6px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .contact-alt a {
+            color: var(--navy);
+            font-family: var(--font-head);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+        .contact-alt a:hover { color: var(--orange); }
+
+        /* ── Hours badge ─────────────────────── */
+        .hours-strip {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+            padding: 10px 16px;
+            background: rgba(22,163,74,.08);
+            border: 1.5px solid rgba(22,163,74,.2);
+            border-radius: 10px;
+        }
+        .hours-strip .live-dot-sm {
+            height: 8px;
+            width: 8px;
+            background: var(--green-active);
+            border-radius: 50%;
+            box-shadow: 0 0 6px var(--green-active);
+            animation: flashPulse 1.8s infinite;
+            flex-shrink: 0;
+        }
+        .hours-strip span {
+            font-family: var(--font-head);
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--green-active);
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        /* ── How It Works (override step styling) ── */
+        .how-it-works-card {
+            padding: 38px 38px 28px;
+        }
+        .how-it-works-card h2 {
+            font-family: var(--font-head);
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 0 6px;
+        }
+        .how-it-works-card > p {
+            color: var(--text-body);
+            font-size: .93rem;
+            margin: 0 0 24px;
+        }
+
+        /* ── Guarantee card ──────────────────── */
+        .guarantee-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .guarantee-header h2 {
+            font-family: var(--font-head);
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+        .guarantee-icon-ring {
+            width: 48px;
+            height: 48px;
+            background: var(--navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* ── Coverage map placeholder ────────── */
+        .coverage-banner {
+            text-align: center;
+            margin-top: 12px;
+            padding: 38px 28px;
+            background: linear-gradient(140deg, var(--navy-dark) 0%, var(--navy-mid) 100%);
+            border-radius: 18px;
+            border: 1.5px solid transparent;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.38s var(--ease-out), box-shadow 0.38s;
+        }
+        .coverage-banner:hover {
+            box-shadow: var(--shadow-blue);
+            transform: translateY(-4px);
+        }
+        .coverage-banner h2 {
+            font-family: var(--font-head);
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--white);
+            margin: 0 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .coverage-banner p {
+            color: rgba(255,255,255,.72);
+            font-size: .95rem;
+            margin: 0 0 22px;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .region-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+        .region-tag {
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.18);
+            color: rgba(255,255,255,.85);
+            font-family: var(--font-head);
+            font-size: 12.5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 100px;
+            transition: background .2s, border-color .2s;
+        }
+        .region-tag:hover {
+            background: rgba(249,115,22,.18);
+            border-color: rgba(249,115,22,.4);
+            color: var(--orange);
+        }
+
+        /* ── Responsive tightening ───────────── */
+        @media (max-width: 600px) {
+            .dispatch-hero { min-height: 300px; height: 44vh; }
+            .dispatch-hero h1 { font-size: clamp(36px, 10vw, 52px); }
+            .direct-phone-display span { font-size: 24px; }
+            .how-it-works-card { padding: 28px 20px 20px; }
+            .scroll-indicator { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     HEADER
+════════════════════════════════════════ -->
+<header id="site-header">
+    <nav>
+        <a href="index.html" class="logo-link" aria-label="Richmond Hill Plumbing Pros – Home">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
+                        <circle cx="19" cy="19" r="19" fill="#1a3a6e"/>
+                        <path d="M12 27L22 17" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+                        <circle cx="26" cy="13" r="5" stroke="#f97316" stroke-width="2.2" fill="none"/>
+                        <path d="M11.5 24.5C11.5 24.5 8 21 8 18.5C8 16.3 9.5 15 11.5 15C13.5 15 15 16.3 15 18.5C15 21 11.5 24.5 11.5 24.5Z"
+                              fill="#60a5fa" opacity="0.9"/>
+                    </svg>
+                </div>
+                <div class="logo-text-block">
+                    <span class="logo-text">RICHMOND HILL</span>
+                    <span class="logo-sub">PLUMBING PROS</span>
+                </div>
+            </div>
+        </a>
+
+        <div class="header-info-center">
+            <span class="header-status">
+                <span class="status-dot-small"></span>
+                24/7 DISPATCH ACTIVE — YORK REGION
+            </span>
+            <a href="tel:+12895886513" class="header-phone">289-588-6513</a>
+        </div>
+
+        <ul class="nav-links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dispatch.html" class="active-link">Dispatch</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Our Work</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ════════════════════════════════════════
+     DISPATCH HERO
+════════════════════════════════════════ -->
+<section class="dispatch-hero" id="hero">
+    <div class="hero-content">
+        <div class="urgent-badge">
+            <div class="live-dot"></div>
+            EMERGENCY DISPATCH ACTIVE
+        </div>
+
+        <h1>Need a Plumber <em>Now?</em></h1>
+
+        <p class="hero-sub">
+            Emergency dispatch is active across Richmond Hill and York Region. A certified pro is ready to roll.
+        </p>
+
+        <div class="hero-cta-group">
+            <a href="#dispatch-form" class="dispatch-btn" onclick="document.getElementById('dispatch-form').scrollIntoView({behavior:'smooth',block:'start'}); return false;">
+                <span class="dispatch-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10h12M11 4l6 6-6 6"
+                              stroke="currentColor" stroke-width="2.2"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="dispatch-label">REQUEST DISPATCH</span>
+            </a>
+            <a href="tel:+12895886513" class="quote-hero-btn">Call 289-588-6513</a>
+        </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M4 7l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════ -->
+<main class="container" id="dispatch-form">
+
+    <!-- DISPATCH SPLIT: Form + Sidebar -->
+    <div class="dispatch-split reveal">
+
+        <!-- ── FORM ────────────────────────────── -->
+        <div class="dispatch-form-container">
+            <div class="form-header">
+                <h2>Request Emergency Dispatch</h2>
+                <p>Fill out the form below — our team responds within 15 minutes, 24/7.</p>
+            </div>
+            <form class="custom-contact-form dispatch-form" id="dispatch-form-el"
+                  action="https://formspree.io/f/xykddwlk" method="POST">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required
+                               placeholder="Jane Smith" autocomplete="name">
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required
+                               placeholder="(289) 555-0123" autocomplete="tel">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required
+                           placeholder="jane@example.com" autocomplete="email">
+                </div>
+                <div class="input-group">
+                    <label for="service">Service Needed</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Select a service&hellip;</option>
+                        <option value="emergency">🚨 24/7 Emergency Dispatch</option>
+                        <option value="clog">Drain Cleaning &amp; Clogs</option>
+                        <option value="leak">Leak Detection &amp; Repair</option>
+                        <option value="install">New Fixture Installation</option>
+                        <option value="water-heater">Water Heater Service</option>
+                        <option value="other">Other Inquiry</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="message">Issue Details</label>
+                    <textarea id="message" name="message" rows="4" required
+                              placeholder="Describe the issue and your location (Richmond Hill, Markham, Vaughan, etc.)&hellip;"></textarea>
+                </div>
+                <input type="hidden" name="_source" value="dispatch-page">
+                <button type="submit" class="submit-btn">DISPATCH A PLUMBER NOW</button>
+                <p class="privacy-note">🔒 100% private. Your information is never shared. We respond within 15 minutes.</p>
+            </form>
+        </div>
+
+        <!-- ── SIDEBAR ─────────────────────────── -->
+        <div class="dispatch-info">
+
+            <!-- Direct Contact -->
+            <div class="direct-contact-card">
+                <h3>Direct Contact</h3>
+                <p>For immediate emergencies — burst pipes, flooding, gas leaks — call us directly for fastest response.</p>
+
+                <div class="direct-phone-display">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A17 17 0 013 4a2 2 0 012-2"
+                              stroke="#1a3a6e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>289-588-6513</span>
+                </div>
+
+                <a href="tel:+12895886513" class="call-now-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                        <path d="M4.5 3.5h3.5l1.5 3.5L8 8.5a9.5 9.5 0 004 4l1.5-1.5L17 12.5v3a1.5 1.5 0 01-1.5 1.5A13.5 13.5 0 013 4.5 1.5 1.5 0 014.5 3"
+                              stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    CALL NOW
+                </a>
+
+                <div class="contact-alt">
+                    <p>Or email us at</p>
+                    <a href="mailto:info@richmondhillplumbingpros.ca">info@richmondhillplumbingpros.ca</a>
+                </div>
+
+                <div class="hours-strip">
+                    <div class="live-dot-sm"></div>
+                    <span>Open 24/7 — 365 days a year</span>
+                </div>
+            </div>
+
+            <!-- How It Works -->
+            <div class="info-block how-it-works-card">
+                <h2>How It Works</h2>
+                <p>Three simple steps to a solved plumbing emergency.</p>
+                <div class="step-list">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">
+                            <h3>Submit Your Request</h3>
+                            <p>Fill out the dispatch form or call us directly. Include your address and a brief description of the issue.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">
+                            <h3>We Confirm &amp; Dispatch</h3>
+                            <p>Our team reviews your request within minutes. A certified technician is dispatched to your location immediately.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">
+                            <h3>Problem Solved</h3>
+                            <p>Your plumber arrives within 60 minutes, diagnoses the issue, provides upfront pricing, and completes the repair — guaranteed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ── Section Divider ───────────────────── -->
+    <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-box"></span>
+        <span class="divider-line"></span>
+    </div>
+
+    <!-- ── OUR GUARANTEE ─────────────────────── -->
+    <div class="info-block guarantee-card reveal">
+        <div class="guarantee-header">
+            <div class="guarantee-icon-ring">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 2L20 6v6c0 5.5-3.8 10.7-8 12-4.2-1.3-8-6.5-8-12V6l8-4z"
+                          stroke="#f97316" stroke-width="2" stroke-linejoin="round" fill="none"/>
+                    <path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h2>Our Guarantee</h2>
+        </div>
+        <ul class="guarantee-list">
+            <li>
+                <strong>Licensed Master Plumber</strong>
+                Every job is completed by an Ontario-licensed, background-checked professional. Owner Arvin Amoukarami personally oversees quality on every call.
+            </li>
+            <li>
+                <strong>Upfront, Honest Pricing</strong>
+                You'll see the full price before any work begins — no hidden fees, no surprises. If the cost changes, we get your approval first.
+            </li>
+            <li>
+                <strong>60-Minute Response Time</strong>
+                When you dispatch, a certified technician is en route in minutes. We guarantee arrival within one hour across York Region.
+            </li>
+            <li>
+                <strong>Fully Insured &amp; Bonded</strong>
+                We carry comprehensive liability insurance and WSIB coverage. Your property is protected from the moment we arrive.
+            </li>
+            <li>
+                <strong>Satisfaction Guaranteed</strong>
+                If you're not 100% satisfied with our work, we'll make it right — no questions asked. That's our promise.
+            </li>
+        </ul>
+    </div>
+
+    <!-- ── COVERAGE BANNER ───────────────────── -->
+    <div class="coverage-banner reveal">
+        <h2>Serving All of York Region</h2>
+        <p>Our fleet covers every neighbourhood. Wherever you are, a certified plumber is close by and ready to help.</p>
+        <div class="region-tags">
+            <span class="region-tag">Richmond Hill</span>
+            <span class="region-tag">Markham</span>
+            <span class="region-tag">Vaughan</span>
+            <span class="region-tag">Aurora</span>
+            <span class="region-tag">Newmarket</span>
+            <span class="region-tag">Thornhill</span>
+            <span class="region-tag">King City</span>
+            <span class="region-tag">Stouffville</span>
+            <span class="region-tag">Greater Toronto</span>
+        </div>
+    </div>
+
+</main>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+                    <circle cx="17" cy="17" r="17" fill="#1a3a6e"/>
+                    <path d="M10 26C10 21 13.1 18 17 18C20.9 18 24 21 24 26"
+                          stroke="#fff" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                    <rect x="12" y="10" width="10" height="8" rx="1.5"
+                          fill="none" stroke="#f97316" stroke-width="2"/>
+                    <line x1="17" y1="18" x2="17" y2="14"
+                          stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <div>
+                    <span class="footer-brand-name">Richmond Hill Plumbing Pros</span>
+                    <span class="footer-brand-sub">York Region's 24/7 Plumbing Experts</span>
+                </div>
+            </div>
+            <p class="footer-owner">
+                Owner: <strong>Arvin Amoukarami</strong> — Licensed Master Plumber, ON
+            </p>
+        </div>
+
+        <div class="footer-cta-container">
+            <p class="footer-contact">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                     style="vertical-align:middle;margin-right:7px" aria-hidden="true">
+                    <path d="M3 3h3.5l1.5 3.5L6.5 8a9.5 9.5 0 004 4l1.5-1.5 3.5 1.5v3A1.5 1.5 0 0114 16.5 13.5 13.5 0 01.5 3 1.5 1.5 0 013 1.5"
+                          stroke="#f97316" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                CALL OR TEXT: +1-289-588-6513
+            </p>
+            <a href="#dispatch-form" class="footer-btn"
+               onclick="document.getElementById('dispatch-form').scrollIntoView({behavior:'smooth',block:'start'}); return false;">
+                DISPATCH A PLUMBER
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Proudly Serving Richmond Hill, Markham, Vaughan &amp; All of York Region &nbsp;|&nbsp; Fully Licensed &amp; Insured</p>
+        <p>&copy; 2026 Richmond Hill Plumbing Pros &nbsp;|&nbsp; All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
